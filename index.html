@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Strings: Dating Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="title-screen" class="screen active">
+            <h1>Heart Strings</h1>
+            <h2>A Dating Simulator</h2>
+            <button id="start-btn">Start Game</button>
+        </div>
+        
+        <div id="character-select" class="screen">
+            <h2>Choose Your Date</h2>
+            <div class="character-grid">
+                <div class="character" data-id="alex">
+                    <svg class="character-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="#FFD700"/>
+                        <circle cx="40" cy="35" r="3" fill="#000"/>
+                        <circle cx="60" cy="35" r="3" fill="#000"/>
+                        <path d="M40 55 Q50 65 60 55" stroke="#000" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3>Alex</h3>
+                    <p>Fun, outgoing, loves adventures</p>
+                </div>
+                <div class="character" data-id="jordan">
+                    <svg class="character-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="#87CEEB"/>
+                        <circle cx="40" cy="35" r="3" fill="#000"/>
+                        <circle cx="60" cy="35" r="3" fill="#000"/>
+                        <path d="M40 55 Q50 60 60 55" stroke="#000" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3>Jordan</h3>
+                    <p>Intellectual, calm, enjoys books</p>
+                </div>
+                <div class="character" data-id="taylor">
+                    <svg class="character-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="#FF69B4"/>
+                        <circle cx="40" cy="35" r="3" fill="#000"/>
+                        <circle cx="60" cy="35" r="3" fill="#000"/>
+                        <path d="M40 50 Q50 55 60 50" stroke="#000" stroke-width="2" fill="none"/>
+                    </svg>
+                    <h3>Taylor</h3>
+                    <p>Creative, artistic, loves music</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="date-screen" class="screen">
+            <div id="date-bg"></div>
+            <div id="character-display">
+                <!-- Character SVG will be inserted here -->
+            </div>
+            <div id="dialogue-box">
+                <p id="character-name"></p>
+                <p id="dialogue-text"></p>
+                <div id="choices-container"></div>
+            </div>
+            <div id="stats">
+                <div id="affection">
+                    <span>Affection:</span>
+                    <div class="meter">
+                        <div class="meter-fill" id="affection-meter"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="ending-screen" class="screen">
+            <h2 id="ending-title"></h2>
+            <p id="ending-text"></p>
+            <div id="ending-image"></div>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
